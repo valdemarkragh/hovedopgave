@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap');
+// VARIABLES //
+
+$mainText-color: #fff;
+$mainText-dark: #042D4A;
+$mainBg-color: #3169AD;
+
+
+$navBg-color: #4989d6;
+
+// GENERAL STYLING
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: $mainText-dark;
+    background: $mainText-color;
+}
+
+body::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #4989d6;
+}
+
+.hide {
+    display: none;
+}
+
+.section-image {
+    height: 200px;
+}
+
+.waves {
+    background-image: url('../images/custom.png');
+    background-size: cover;
+}
+
+.grey {
+    background-image: url('../images/grey-bird.png');
+    background-size: cover;
+}
+
+.grey-gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 60%, rgba(245,245,245,1) 100%);
+}
+
+.grey-gradient-second {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 60%, rgba(245,245,245,1) 100%);
+}
+
+.max-height {
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+.italic {
+    font-style:italic;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-primary {
+    bottom: 5px;
+    background-color: $mainBg-color;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: $mainText-color;
+        color: $mainBg-color;
+        border: 1px solid $mainBg-color;
+    }
+}
+
+.action-btn {
+
+    & .btn {
+        background: $mainBg-color;
+        color: $mainText-color;
+        padding: 2% 6%;
+        margin-bottom: 2%;
+        border: 2px solid transparent;
+        font-size: 1.2em;
+        cursor: pointer;
+
+        &:hover {
+            background: $mainText-color;
+            color: $mainBg-color;
+            border: 2px solid $mainBg-color;
+        }
+    }
+}
+
+// NAV //
+
+nav {
+    font-size: 1.1rem;
+    background: $mainText-color;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+
+    & .nav-link,
+    .navbar-brand {
+        color: $mainText-dark;
+
+
+        &:hover {
+            color: $mainBg-color;
+        }
+    }
+
+    & .nav-link {
+        font-weight: 300;
+        font-size: 1.1em;
+        cursor: pointer;
+
+        &:hover {
+            color: $navBg-color;
+        }
+    }
+
+    & a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+        color: $navBg-color;
+    }
+
+    & .active {
+        color: $mainBg-color;
+    }
+
+    & .navbar-img {
+        background: url('../images/logo-test.png');
+        height: 55px;
+        width: 55px;
+        margin-right: 10px;
+    }
+}
+
+
+// FRONTPAGE //
+
+.banner {
+
+    color: $mainText-color;
+    background-image: url('../images/frontpage-min.jpg');
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+
+    & .container {
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .row {
+            justify-content: center;
+        }
+    }
+
+    & .dark-bg {
+        background-color: rgba(12, 11, 11, 0.8);
+        width: 70%;
+        -webkit-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.75);
+    }
+
+    & p {
+        font-size: 1.2em;
+        padding: 2% 10%;
+    }
+
+    & h1 {
+        font-size: 2.4em;
+        margin-top: 2%;
+        font-style: italic;
+    }
+
+    & .banner-text {
+
+        & hr {
+            border-bottom: 3px solid $mainBg-color;
+            width: 20%;
+        }
+    }
+
+    & a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+        color: $mainBg-color;
+    }
+}
+
+.frontpage-section {
+    min-height: 400px;
+    margin: 4% 0;
+}
+
+#intro {
+
+    & .text-wrapper {
+        display: flex;
+        align-items: flex-end;
+
+        & .icon {
+            font-size: 2em;
+            color: $mainBg-color;
+            border: 2px solid $mainBg-color;
+            padding: 2px 10px;
+        }
+
+        & h4 {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+
+    & hr {
+        border-bottom: 3px solid $mainBg-color;
+        width: 15%;
+        float: left;
+    }
+
+    & .col-lg-6 {
+        margin-bottom: 3%;
+    }
+
+    & p {
+        float: left;
+        line-height: 30px;
+        font-size: 1.05em;
+    }
+}
+
+
+#ships {
+    background: $mainText-dark;
+    min-height: 650px;
+    margin: 0;
+
+    & .container {
+        height: 100%;
+    }
+
+    & h2, h3, h4 {
+        color: $mainText-color;
+        margin-top: 3%;
+    }
+
+    & hr {
+        border-bottom: 3px solid $mainText-color;
+        width: 10%;
+    }
+
+    & .react-multi-carousel-list {
+        height: 75%;
+    }
+
+    & .react-multi-carousel-track {
+        min-height: 500px;
+    }
+
+    & .card {
+        margin: 4%;
+        height: 450px;
+
+        & .btn {
+            position: absolute;
+            bottom: 5px;
+            background-color: $mainBg-color;
+            border: 1px solid transparent;
+
+            &:hover {
+                background-color: $mainText-color;
+                color: $mainBg-color;
+                border: 1px solid $mainBg-color;
+            }
+        }
+    }
+
+    & .card-img-top {
+        object-fit: cover;
+        height: 250px;
+    }
+}
+
+
+#testimonial {
+
+    min-height: 350px;
+    background: #f5f5f5;
+    padding: 5%;
+    margin: 0;
+    
+    & .container {
+        padding: 30px;
+        box-shadow: 0 0px 6px 0 rgba(0,0,0,0.075);
+        background: #fff;
+        border-radius:20px;
+    }
+
+    & .avatar {
+        text-align: center;
+        margin-bottom: 2em;
+
+        & img {
+            width: 10%;
+            border-radius: 50%;
+            border: 4px solid $mainBg-color;
+        }
+    }
+
+    & .quotes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 200px;
+        text-align: center;
+
+        & h5 {
+            font-style: italic;
+        }
+
+        & p {
+            margin-top: auto;
+        }
+    }
+
+    & .quotes-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+#gallery {
+    background-image: url('../images/frontpage-min.jpg');
+    background-size: cover;
+    margin: 0;
+
+    & .ReactGridGallery_tile-viewport > img {
+        object-fit: cover;
+    }
+
+    & .bg-color {
+        min-height: 400px;
+        background-color: RGBA(12, 11, 11, 0.8);
+        padding: 5%;
+    }
+
+    & .flex {
+
+        padding: 22px;
+        box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.075);
+
+        & h2 {
+            color: $mainText-color;
+            font-style: italic;
+            line-height: 40px;
+        }
+
+        & hr {
+            border-bottom: 1px solid #fff;
+        }
+
+        & p {
+            color: $mainText-color;
+            line-height: 30px;
+            font-size: 1.1em;
+        }
+    }
+
+    & .text-underline {
+        text-decoration: underline;
+    }
+}
+
+#arrangements {
+
+    min-height: 650px;
+
+    & .react-multi-carousel-list {
+        height: 75%;
+    }
+
+    & .react-multi-carousel-track {
+        min-height: 500px;
+    }
+
+    & .card {
+        margin: 4%;
+        height: 450px;
+        box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.075);
+
+        & .btn {
+            position: absolute;
+            bottom: 5px;
+            background-color: $mainBg-color;
+            border: 1px solid transparent;
+
+            &:hover {
+                background-color: $mainText-color;
+                color: $mainBg-color;
+                border: 1px solid $mainBg-color;
+            }
+        }
+    }
+
+    & .card-img-top {
+        object-fit: cover;
+        height: 250px;
+    }
+}
+
+#contact {
+    background: #f5f5f5;
+    margin: 0;
+    min-height: 550px;
+
+    & hr {
+        border-bottom: 5px solid #1e1e24;
+        width: 10%;
+    }
+}
+
+    .map {
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.075);
+    }
+
+  .pin {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    background: #042D4A;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -20px 0 0 -20px;
+  }
+  .pin:after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin: 8px 0 0 8px;
+    background: #e6e6e6;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .bounce {
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+  }
+  
+  .pulse {
+    background: #d6d4d4;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 11px 0px 0px -12px;
+    transform: rotateX(55deg);
+    z-index: -2;
+  }
+  .pulse:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px #00cae9;
+    animation-delay: 1.1s;
+  }
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(0.1, 0.1);
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1.2, 1.2);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      opacity: 0;
+      transform: translateY(-2000px) rotate(-45deg);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translateY(30px) rotate(-45deg);
+    }
+  
+    80% {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  
+    100% {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+
+
+footer {
+    background: #333;
+    height: auto;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    border-top: 8px solid #042D4A;
+
+    & ul {
+        font-size: 13px;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 15px;
+        color: #7F8C8D;
+    }
+
+    & li {
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    & h3 {
+        color: #fff;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 20px 0 5px;
+        text-transform: uppercase;
+    }
+}
+
+#shipPage {
+    & .ship-row {
+        padding: 10px;
+    
+        & .card {
+            border: none;
+            background: #f5f5f5;
+
+        }
+        & img {
+            height: 75px;
+            object-fit: cover;
+            transition: 1s ease-out;
+            padding: 0 10px;
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    & .ship-container {
+    
+        & .ship-desc {
+            box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.075);
+            padding: 30px;
+            background: $mainText-color;
+    
+            & p {
+                line-height: 30px;
+                font-size: 1.1em;
+                white-space: pre-line;
+            }
+        }
+    }
+
+    & .ship-arrangements {
+        & .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+}
+
+#arrangementPage {
+    & .arrangement-container {
+    
+        & .arrangement-desc {
+            box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.075);
+            padding: 30px;
+            background: $mainText-color;
+    
+            & p {
+                line-height: 30px;
+                font-size: 1.1em;
+                white-space: pre-line;
+            }
+        }
+    }
+}
+
